@@ -7,7 +7,6 @@ Simply add __tokenizer.hpp__ to your c++ project !
 ## Usage
 
 ```c++
-
 // tokenizer initialization
 
 tokenizer tok;
@@ -37,7 +36,6 @@ while (!tok.finished())
 
     std::cout << token << "\n";
 }
-
 ```
 
 So the following input string :
@@ -53,7 +51,7 @@ class my_class
 }
 ```
 
-will inputs this tokens :
+will output this tokens :
 
 ```txt
 class
