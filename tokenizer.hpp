@@ -24,6 +24,20 @@ class tokenizer
 
     public:
 
+    tokenizer() { }
+
+    tokenizer(
+        std::string&& _droppedDelimiters,
+        std::vector<std::string>&& keptDelimiters)
+    {
+        droppedDelimiters = std::move(_droppedDelimiters);
+
+        for (size_t i = 0; i < keptDelimiters.size(); i++)
+        {
+            add_kept_delimiter(std::move(keptDelimiters[i]));
+        }
+    }
+
     void set_dropped_delimiters(std::string&& _droppedDelimiters)
     {
         droppedDelimiters = std::move(_droppedDelimiters);
