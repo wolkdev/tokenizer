@@ -11,11 +11,12 @@
 
 class tokenizer
 {
-    private:
+    public:
 
     size_t pos = 0;
-
     const char* text = nullptr;
+
+    private:
 
     std::string token;
 
@@ -56,6 +57,7 @@ class tokenizer
 
     void start(const char* _text)
     {
+        pos = 0;
         text = _text;
     }
 
